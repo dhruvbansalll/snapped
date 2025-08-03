@@ -3,7 +3,8 @@
 
 Snapped is a full-stack MERN (MongoDB, Express, React, Node.js) application that allows users to post interesting events and memories from their lives. Users can create, view, update, and delete posts, as well as like other people's memories.
 
-![Snapped App Screenshot](https://github.com/user-attachments/assets/703cd788-9892-400f-8752-4f059551ac6a)
+<img width="1878" height="845" alt="image" src="https://github.com/user-attachments/assets/2a759741-8764-4d91-a45b-4df9f21213c9" />
+
 
 ---
 
