@@ -1,10 +1,15 @@
+// client/src/api/index.js
+
 import axios from 'axios';
 
-const url = 'https://snapped-lvgi.onrender.com/';
+// Create an axios instance with the base URL for your backend
+const API = axios.create({ baseURL: 'https://snapped-lvgi.onrender.com' });
 
-export const fetchPosts = () => API.get('/posts'); 
-//export const fetchPosts = () => axios.get(url);
-export const createPost = (newPost) => axios.post(url, newPost);
-export const likePost = (id) => axios.patch(`${url}/${id}/likePost`);
-export const updatePost = (id, updatedPost) => axios.patch(`${url}/${id}`, updatedPost);
-export const deletePost = (id) => axios.delete(`${url}/${id}`);
+// Now use this 'API' instance for all your calls
+// This automatically adds the base URL to every request
+
+export const fetchPosts = () => API.get('/posts');
+export const createPost = (newPost) => API.post('/posts', newPost);
+export const updatePost = (id, updatedPost) => API.patch(`/posts/${id}`, updatedPost);
+export const deletePost = (id) => API.delete(`/posts/${id}`);
+export const likePost = (id) => API.patch(`/posts/${id}/likePost`);
